@@ -1,0 +1,4 @@
+.renderignore
+# Ignore files for Render deploy
+*.env
+*.local
