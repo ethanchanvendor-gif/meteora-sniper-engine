@@ -1,0 +1,26 @@
+services:
+  - type: web_service
+    name: meteora-sniper-engine
+    env: node
+    region: oregon
+    plan: free
+    branch: main
+    buildCommand: "npm ci"
+    startCommand: "npm start"
+    autoDeploy: true
+    envVars:
+      - key: HELIUS_API_KEY
+        value: ""
+        sensitive: true
+      - key: PRIVATE_KEY
+        value: ""
+        sensitive: true
+      - key: SUPABASE_URL
+        value: ""
+      - key: SUPABASE_ANON_KEY
+        value: ""
+        sensitive: true
+      - key: GROQ_API_KEY
+        value: ""
+      - key: PORT
+        value: "3001"
